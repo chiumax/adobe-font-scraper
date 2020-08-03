@@ -9,8 +9,75 @@ const fs = require("fs");
 
 // global stuff...
 let fontFamily;
+let fontHrefCache = [];
+let totalFontCountCache;
+
+let fontBrowseUrl = ``;
+const browserMode = ["default", "japanese"];
+
+let fontMetaData = {};
+
+// scrape outer page for all font links
+const scrapeForFontLinks = async (link) => {
+  const browser = await puppeteer.launch({
+    headless: true,
+  });
+  const page = await browser.newPage();
+
+  for (browseMode of browserMode) {
+    let hrefs;
+    let fontPages;
+    let unique;
+    let pageNum = 1;
+    console.log(browseMode);
+    fontMetaData[browseMode] = {};
+
+    fontBrowseUrl = `https://fonts.adobe.com/fonts?browse_mode=${browseMode}&page=${pageNum}&sort=alpha`;
+    await page.goto(fontBrowseUrl);
+    const fontCount = await page.evaluate(() => {
+      return document.querySelector("div[data-id='family-count-message']")
+        .innerText;
+    });
+    fontMetaData[browseMode].count = fontCount;
+    console.log(fontMetaData);
+
+    do {
+      fontBrowseUrl = `https://fonts.adobe.com/fonts?browse_mode=${browseMode}&page=${pageNum}&sort=alpha`;
+      await page.goto(fontBrowseUrl);
+      // all links on page
+      hrefs = await page.$$eval("a", (as) => as.map((a) => a.href));
+      // all links to fonts
+      fontPages = hrefs.filter((href) => {
+        splitHref = href.split("/");
+        return splitHref[splitHref.length - 2] == "fonts";
+      });
+      // all unique links to fonts
+      unique = [...new Set(fontPages)];
+      fontHrefCache = fontHrefCache.concat(unique);
+      // console.log(fontHrefCache);
+      console.log("scraped ", unique.length, "fonts");
+      pageNum++;
+    } while (unique.length > 0);
+  }
+  await browser.close();
+  console.log(
+    "There are a total of: " +
+      fontMetaData.default.count +
+      fontMetaData.japanese.count +
+      "fonts"
+  );
+
+  console.log("We recorded a total of: " + fontHrefCache.length + "fonts");
+
+  for (fontLink of fontHrefCache) {
+    await scrapeFonts(fontLink);
+  }
+
+  // scrape fonts from font link here
+};
 
 const scrapeFonts = async (link) => {
+  console.log("display once");
   linkArr = link.split("/");
   fontFamily = linkArr[linkArr.length - 1];
 
@@ -32,10 +99,9 @@ const scrapeFonts = async (link) => {
     return fonts;
   });
   await browser.close();
+
   const formattedFontArr = parseFonts(fonts);
   writeFonts(formattedFontArr);
-  // console.log("final");
-  // console.log(formattedFontArr);
 };
 
 // Filters out adobe fonts and returns an array with links to WOFF2 fonts
@@ -65,15 +131,15 @@ const writeFonts = async (fonts) => {
     fs.writeFileSync("out.ttf", ttfBuffer);
     let metadata = opentype.loadSync("out.ttf").names;
     console.log(metadata);
-    if (!fs.existsSync(fontFamily)) {
-      fs.mkdirSync(fontFamily);
+    if (!fs.existsSync("./temp/" + fontFamily)) {
+      fs.mkdirSync("./temp/" + fontFamily);
     }
     fs.writeFileSync(
-      fontFamily + "/" + metadata.postScriptName.en + ".ttf",
+      "./temp/" + fontFamily + "/" + metadata.postScriptName.en + ".ttf",
       ttfBuffer
     );
   }
-  await zip("./" + fontFamily + "/", fontFamily + ".zip");
+  await zip("./temp/" + fontFamily + "/", "./zips/" + fontFamily + ".zip");
 };
 
 // const openBrowser = async (username) => {
@@ -107,4 +173,5 @@ const writeFonts = async (fonts) => {
 //   return data;
 // };
 
-scrapeFonts("https://fonts.adobe.com/fonts/source-han-sans-japanese");
+// scrapeFonts("https://fonts.adobe.com/fonts/source-han-sans-japanese");
+scrapeForFontLinks("https://fonts.adobe.com/fonts?browse_mode=default");
