@@ -1,16 +1,19 @@
 const puppeteer = require("puppeteer");
 const getUrls = require("get-urls");
 const request = require("request");
-const opentype = require("opentype/src/opentype.js");
+const opentype = require("opentype.js");
+// const opentype = require("opentype/src/opentype.js");
 const woff2 = require("woff2");
+const { zip } = require("zip-a-folder");
 const fs = require("fs");
 
-//font.tables.name.en.fullName
-//font.tables.name.en.fontFamily
-
-// request("http://www.sitepoint.com").pipe(fs.createWriteStream("jspro.htm"));
+// global stuff...
+let fontFamily;
 
 const scrapeFonts = async (link) => {
+  linkArr = link.split("/");
+  fontFamily = linkArr[linkArr.length - 1];
+
   const browser = await puppeteer.launch({
     headless: true,
   });
@@ -48,27 +51,29 @@ const parseFonts = (fonts) => {
 
 // Write fonts to file
 const writeFonts = async (fonts) => {
-  //await a foreach?
-  fonts.forEach(async (url) => {
-    console.log("before");
+  for (url of fonts) {
     await new Promise((resolve) =>
       request(url.source)
-        .pipe(fs.createWriteStream("out"))
+        .pipe(fs.createWriteStream("out.woff2"))
         .on("finish", () => {
           console.log("file written");
           resolve();
         })
     );
-    console.log("after");
-    // console.log(request(url.source));
-    let buffer = fs.readFileSync("out");
-
-    let metadata = opentype.parse(buffer);
-    console.log(metadata.tables.name.en);
-    console.log(url.family);
-    // request(url.source).pipe(fs.createWriteStream(url.family + ".woff2"));
-  });
-  console.log("huh");
+    let buffer = fs.readFileSync("out.woff2");
+    let ttfBuffer = woff2.decode(buffer);
+    fs.writeFileSync("out.ttf", ttfBuffer);
+    let metadata = opentype.loadSync("out.ttf").names;
+    console.log(metadata);
+    if (!fs.existsSync(fontFamily)) {
+      fs.mkdirSync(fontFamily);
+    }
+    fs.writeFileSync(
+      fontFamily + "/" + metadata.postScriptName.en + ".ttf",
+      ttfBuffer
+    );
+  }
+  await zip("./" + fontFamily + "/", fontFamily + ".zip");
 };
 
 // const openBrowser = async (username) => {
@@ -102,4 +107,4 @@ const writeFonts = async (fonts) => {
 //   return data;
 // };
 
-scrapeFonts("https://fonts.adobe.com/fonts/rukou");
+scrapeFonts("https://fonts.adobe.com/fonts/source-han-sans-japanese");
