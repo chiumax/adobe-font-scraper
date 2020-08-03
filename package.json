@@ -6,9 +6,15 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "get-urls": "^9.2.1",
+    "node-fetch": "^2.6.0",
+    "opentype": "git+https://github.com/bramstein/opentype.git",
+    "puppeteer": "^5.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "request": "^2.88.2",
+    "woff2": "^0.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
