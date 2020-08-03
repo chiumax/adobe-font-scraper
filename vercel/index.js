@@ -6,6 +6,7 @@ const opentype = require("opentype.js");
 const woff2 = require("woff2");
 const { zip } = require("zip-a-folder");
 const fs = require("fs");
+const rimraf = require("rimraf");
 
 // global stuff...
 let fontFamily;
@@ -17,7 +18,7 @@ const browserMode = ["default", "japanese"];
 
 let fontMetaData = {};
 
-// scrape outer page for all font links
+// scrape outer page for all font links to file
 const scrapeForFontLinks = async (link) => {
   const browser = await puppeteer.launch({
     headless: true,
@@ -68,18 +69,25 @@ const scrapeForFontLinks = async (link) => {
   );
 
   console.log("We recorded a total of: " + fontHrefCache.length + "fonts");
-
-  for (fontLink of fontHrefCache) {
-    await scrapeFonts(fontLink);
-  }
+  let temp = { fontArray: fontHrefCache };
+  const jsonString = JSON.stringify(temp);
+  fs.writeFileSync("./fontHrefs.json", jsonString);
+  // for (fontLink of fontHrefCache) {
+  //   await scrapeFonts(fontLink);
+  // }
 
   // scrape fonts from font link here
 };
 
 const scrapeFonts = async (link) => {
-  console.log("display once");
+  let fontWritten = false;
   linkArr = link.split("/");
   fontFamily = linkArr[linkArr.length - 1];
+
+  // if (fs.existsSync("./zips/" + fontFamily + ".zip")) {
+  //   console.log(fontFamily, "exists! \nSkipping...");
+  //   return true;
+  // }
 
   const browser = await puppeteer.launch({
     headless: true,
@@ -101,7 +109,14 @@ const scrapeFonts = async (link) => {
   await browser.close();
 
   const formattedFontArr = parseFonts(fonts);
-  writeFonts(formattedFontArr);
+  while (!fontWritten) {
+    try {
+      fontWritten = await writeFonts(formattedFontArr);
+    } catch (err) {
+      console.log("uh-oh");
+      console.log(err);
+    }
+  }
 };
 
 // Filters out adobe fonts and returns an array with links to WOFF2 fonts
@@ -117,12 +132,14 @@ const parseFonts = (fonts) => {
 
 // Write fonts to file
 const writeFonts = async (fonts) => {
+  rimraf.sync("./temp");
+  fs.mkdirSync("./temp/");
   for (url of fonts) {
     await new Promise((resolve) =>
       request(url.source)
         .pipe(fs.createWriteStream("out.woff2"))
         .on("finish", () => {
-          console.log("file written");
+          // console.log("file written");
           resolve();
         })
     );
@@ -130,16 +147,18 @@ const writeFonts = async (fonts) => {
     let ttfBuffer = woff2.decode(buffer);
     fs.writeFileSync("out.ttf", ttfBuffer);
     let metadata = opentype.loadSync("out.ttf").names;
-    console.log(metadata);
-    if (!fs.existsSync("./temp/" + fontFamily)) {
-      fs.mkdirSync("./temp/" + fontFamily);
-    }
+    // console.log(metadata);
+    // if (!fs.existsSync("./temp/" + fontFamily)) {
+    //   fs.mkdirSync("./temp/" + fontFamily);
+    // }
     fs.writeFileSync(
-      "./temp/" + fontFamily + "/" + metadata.postScriptName.en + ".ttf",
+      "./temp/" + metadata.postScriptName.en + ".ttf",
       ttfBuffer
     );
   }
-  await zip("./temp/" + fontFamily + "/", "./zips/" + fontFamily + ".zip");
+  await zip("./temp/", "./zips/" + fontFamily + ".zip");
+  console.log(fontFamily, "scraped and zipped");
+  return true;
 };
 
 // const openBrowser = async (username) => {
@@ -173,5 +192,19 @@ const writeFonts = async (fonts) => {
 //   return data;
 // };
 
-// scrapeFonts("https://fonts.adobe.com/fonts/source-han-sans-japanese");
-scrapeForFontLinks("https://fonts.adobe.com/fonts?browse_mode=default");
+scrapeFonts("https://fonts.adobe.com/fonts/adobe-fangsong");
+// const scrapedFontLinks = fs.readFileSync("fontHrefs.json");
+// let fontArray = JSON.parse(scrapedFontLinks).fontArray;
+// (async () => {
+//   try {
+//     for (href of fontArray) {
+//       await scrapeFonts(href);
+//     }
+//   } catch (e) {
+//     console.log(e);
+//     // Deal with the fact the chain failed
+//   }
+// })();
+
+// scrapeForFontLinks("https://fonts.adobe.com/fonts?browse_mode=default");
+//
