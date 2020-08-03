@@ -7,18 +7,18 @@ const woff2 = require("woff2");
 const { zip } = require("zip-a-folder");
 const fs = require("fs");
 const rimraf = require("rimraf");
+const path = require("path");
 
 // global stuff...
 let fontFamily;
 let fontHrefCache = [];
-let totalFontCountCache;
 
 let fontBrowseUrl = ``;
 const browserMode = ["default", "japanese"];
 
 let fontMetaData = {};
 
-// scrape outer page for all font links to file
+// scrape outer page for all font links to json
 const scrapeForFontLinks = async (link) => {
   const browser = await puppeteer.launch({
     headless: true,
@@ -60,23 +60,21 @@ const scrapeForFontLinks = async (link) => {
       pageNum++;
     } while (unique.length > 0);
   }
+
   await browser.close();
+
   console.log(
     "There are a total of: " +
       fontMetaData.default.count +
       fontMetaData.japanese.count +
       "fonts"
   );
-
   console.log("We recorded a total of: " + fontHrefCache.length + "fonts");
+
+  // write font links to json
   let temp = { fontArray: fontHrefCache };
   const jsonString = JSON.stringify(temp);
-  fs.writeFileSync("./fontHrefs.json", jsonString);
-  // for (fontLink of fontHrefCache) {
-  //   await scrapeFonts(fontLink);
-  // }
-
-  // scrape fonts from font link here
+  fs.writeFileSync(path.join(__dirname, "fontHrefs.json"), jsonString);
 };
 
 const scrapeFonts = async (link) => {
@@ -84,10 +82,10 @@ const scrapeFonts = async (link) => {
   linkArr = link.split("/");
   fontFamily = linkArr[linkArr.length - 1];
 
-  // if (fs.existsSync("./zips/" + fontFamily + ".zip")) {
-  //   console.log(fontFamily, "exists! \nSkipping...");
-  //   return true;
-  // }
+  if (fs.existsSync(path.join(__dirname, "zips", fontFamily + ".zip"))) {
+    console.log(fontFamily, "exists! \nSkipping...");
+    return true;
+  }
 
   const browser = await puppeteer.launch({
     headless: true,
@@ -113,6 +111,8 @@ const scrapeFonts = async (link) => {
     try {
       fontWritten = await writeFonts(formattedFontArr);
     } catch (err) {
+      await writeFonts(formattedFontArr);
+      fontWritten = true;
       console.log("uh-oh");
       console.log(err);
     }
@@ -130,69 +130,42 @@ const parseFonts = (fonts) => {
   return fontURLs;
 };
 
-// Write fonts to file
+// Write and convert WOFF2 to TTF fonts to file
 const writeFonts = async (fonts) => {
-  rimraf.sync("./temp");
-  fs.mkdirSync("./temp/");
+  rimraf.sync(path.join(__dirname, "temp"));
+  fs.mkdirSync(path.join(__dirname, "temp"));
   for (url of fonts) {
     await new Promise((resolve) =>
       request(url.source)
-        .pipe(fs.createWriteStream("out.woff2"))
+        .pipe(fs.createWriteStream(path.join(__dirname, "out.woff2")))
         .on("finish", () => {
-          // console.log("file written");
           resolve();
         })
     );
-    let buffer = fs.readFileSync("out.woff2");
+    let buffer = fs.readFileSync(path.join(__dirname, "out.woff2"));
     let ttfBuffer = woff2.decode(buffer);
-    fs.writeFileSync("out.ttf", ttfBuffer);
-    let metadata = opentype.loadSync("out.ttf").names;
-    // console.log(metadata);
-    // if (!fs.existsSync("./temp/" + fontFamily)) {
-    //   fs.mkdirSync("./temp/" + fontFamily);
-    // }
+    fs.writeFileSync(path.join(__dirname, "out.ttf"), ttfBuffer);
+    // Opentype can ONLY parse TTFs, not WOFF2s
+    let metadata = opentype.loadSync(path.join(__dirname, "out.ttf")).names;
     fs.writeFileSync(
-      "./temp/" + metadata.postScriptName.en + ".ttf",
+      path.join(__dirname, "temp", metadata.postScriptName.en + ".ttf"),
       ttfBuffer
     );
   }
-  await zip("./temp/", "./zips/" + fontFamily + ".zip");
+  await zip(
+    path.join(__dirname, "temp"),
+    path.join(__dirname, "zips", fontFamily + ".zip")
+  );
+
   console.log(fontFamily, "scraped and zipped");
   return true;
 };
 
-// const openBrowser = async (username) => {
-//   const browser = await puppeteer.launch({
-//     headless: true,
-//   });
-//   const page = await browser.newPage();
+// scrapeFonts("https://fonts.adobe.com/fonts/adasdfasdfobe-fangsong");
 
-//   //   await page.goto("https://fonts.adobe.com/fonts/rukou");
-//   await page.goto("https://fonts.adobe.com/fonts/");
+// run one time only, scrapes all the font links from adobe. This will generate a fontHrefs.json
 
-//   // Login form
-//   await page.screenshot({ path: "1.png" });
-
-//   //   await page.click("[type=submit]");
-
-//   await page.goto(`https://fonts.adobe.com/fonts/rukou`);
-//   await page.screenshot({ path: "2.png" });
-
-//   // Execute code in the DOM
-//   const data = await page.evaluate(() => {
-//     // fonts are woff2 format
-//     const fonts = window.Typekit.fonts.fonts;
-//     const fontURLs = parseFonts(fonts);
-//   });
-
-//   await browser.close();
-
-//   console.log(data);
-
-//   return data;
-// };
-
-scrapeFonts("https://fonts.adobe.com/fonts/adobe-fangsong");
+// await scrapeForFontLinks("https://fonts.adobe.com/fonts?browse_mode=default");
 // const scrapedFontLinks = fs.readFileSync("fontHrefs.json");
 // let fontArray = JSON.parse(scrapedFontLinks).fontArray;
 // (async () => {
@@ -202,9 +175,9 @@ scrapeFonts("https://fonts.adobe.com/fonts/adobe-fangsong");
 //     }
 //   } catch (e) {
 //     console.log(e);
-//     // Deal with the fact the chain failed
 //   }
 // })();
 
-// scrapeForFontLinks("https://fonts.adobe.com/fonts?browse_mode=default");
-//
+//////////////////////////
+
+module.exports = scrapeFonts;

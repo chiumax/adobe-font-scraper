@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Shortener</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+      integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU="
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="body">
+      <!--  -->
+      <div>Adobe Font Download Utility</div>
+      <div>Downloads <b>.ttf</b> font files from any Adobe font link.</div>
+      <form
+        action="/"
+        method="POST"
+        name="form"
+      >
+        <span>
+          <label>Adobe Font Link</label>
+          <input
+            type="url"
+            name="fontUrl"
+            id="fontUrl"
+            placeholder="https://fonts.adobe.com/fonts/azo-sans"
+            required
+          />
+        </span>
+        <button class="submit" type="submit">Submit</button>
+      </form>
+      <!-- center -->
+      <footer>
+        <span>
+          This app is in no way affiliated with Adobe Inc. or any of their products.
+        </span>
+        <span>
+          Disclaimer! If you are looking to download a URL with 'collections' in it, the app does not recursively scrape each font family. 
+          Also, quite frankly, it is pretty bugged... will not give straight results
+        </span>
+        <span>
+          This is build with express.js and uses URLs loaded into the browser from Adobe Fonts.
+        </span>
+        <span>
+          Please use this at your own discretion! This is probably illegal lmao.
+        </span>
+        <span>
+          Anyways, if you are interested in scraping all Adobe Fonts at once, please check out the <a href="https://github.com/chiumax/adobe-font-scraper/">source</a>.</span>
+        </span>
+      </footer>
+
+      <!--  -->
+      <!-- <h1 class="title animated bounceIn">LINK AS A SERVICE</h1>
+      <h4 class="subtitle animated bounceIn fast">link.cf12.org</h4> -->
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
