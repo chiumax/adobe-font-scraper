@@ -69,7 +69,7 @@ input {
 
 .submit:hover,
 .submit:focus {
-  background-color: white;
+  /* background-color: white; */
   transform: scale(1.08);
   cursor: pointer;
 }
