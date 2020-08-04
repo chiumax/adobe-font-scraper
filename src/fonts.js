@@ -19,7 +19,7 @@ const browserMode = ["default", "japanese"];
 
 let fontMetaData = {};
 
-// scrape outer page for all font links to json
+// scrape outer page for all font links to  json
 const scrapeForFontLinks = async (link) => {
   const browser = await puppeteer.launch({
     headless: true,
