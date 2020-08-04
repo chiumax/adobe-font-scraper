@@ -23,6 +23,7 @@ let fontMetaData = {};
 const scrapeForFontLinks = async (link) => {
   const browser = await puppeteer.launch({
     headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
 
@@ -90,6 +91,7 @@ const scrapeFonts = async (link) => {
 
   const browser = await puppeteer.launch({
     headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
   // scrape fonts from font link here
