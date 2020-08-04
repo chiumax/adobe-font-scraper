@@ -4,7 +4,8 @@ const getUrls = require("get-urls");
 const request = require("request");
 const opentype = require("opentype.js");
 // const opentype = require("opentype/src/opentype.js");
-const woff2 = require(path.join(__dirname, "woff2", "src", "woff2.js"));
+// const woff2 = require(path.join(__dirname, "woff2", "src", "woff2.js"));
+const woff2 = require("wawoff2");
 const { zip } = require("zip-a-folder");
 const fs = require("fs");
 const rimraf = require("rimraf");
@@ -143,7 +144,8 @@ const writeFonts = async (fonts) => {
         })
     );
     let buffer = fs.readFileSync(path.join(__dirname, "out.woff2"));
-    let ttfBuffer = woff2.decode(buffer);
+    let ttfBuffer = await woff2.decompress(buffer);
+    // let ttfBuffer = woff2.decode(buffer);
     fs.writeFileSync(path.join(__dirname, "out.ttf"), ttfBuffer);
     // Opentype can ONLY parse TTFs, not WOFF2s
     let metadata = opentype.loadSync(path.join(__dirname, "out.ttf")).names;
