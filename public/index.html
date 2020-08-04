@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Link Shortener</title>
+    <title>Adobe Font Scraper</title>
 
     <link
       rel="stylesheet"
@@ -11,36 +11,30 @@
       integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
       crossorigin="anonymous"
     />
-    <!-- <link
+    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
-      integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU="
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
     />
 
     <link
-      href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap"
-      rel="stylesheet"
-    /> -->
 
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div class="body">
       <!--  -->
-      <div>Adobe Font Download Utility</div>
-      <div>Downloads <b>.ttf</b> font files from any Adobe font link.</div>
-      <form
-        action="/"
-        method="POST"
-        name="form"
-      >
-        <span>
-          <label>Adobe Font Link</label>
+      <header>
+        <h1 class="animate__animated animate__backInDown">
+          <b>Adobe Font Download Utility</b>
+        </h1>
+        <p>Downloads <b>.ttf</b> font files from any Adobe font link.</p>
+      </header>
+      <div class="form">
+        <form action="/" method="POST" name="form">
+          <label><b>Adobe Font Link</b></label>
           <input
             type="url"
             name="fontUrl"
@@ -48,27 +42,41 @@
             placeholder="https://fonts.adobe.com/fonts/azo-sans"
             required
           />
-        </span>
-        <button class="submit" type="submit">Submit</button>
-      </form>
+
+          <button class="submit" type="submit">Submit</button>
+        </form>
+      </div>
+
       <!-- center -->
       <footer>
-        <span>
-          This app is in no way affiliated with Adobe Inc. or any of their products.
-        </span>
-        <span>
-          Disclaimer! If you are looking to download a URL with 'collections' in it, the app does not recursively scrape each font family. 
-          Also, quite frankly, it is pretty bugged... will not give straight results
-        </span>
-        <span>
-          This is build with express.js and uses URLs loaded into the browser from Adobe Fonts.
-        </span>
-        <span>
-          Please use this at your own discretion! This is probably illegal lmao.
-        </span>
-        <span>
-          Anyways, if you are interested in scraping all Adobe Fonts at once, please check out the <a href="https://github.com/chiumax/adobe-font-scraper/">source</a>.</span>
-        </span>
+        <p>
+          <i
+            >This app is in no way affiliated with Adobe Inc. or any of their
+            products.</i
+          >
+        </p>
+        <p>
+          <i> URLs with "collections" in them are not supported.</i>
+        </p>
+        <p>
+          <i>
+            This is builT with express.js and uses URLs loaded into the browser
+            from Adobe Fonts.
+          </i>
+        </p>
+        <p>
+          <i>
+            Please use this at your own discretion! This is probably illegal
+            lmao.
+          </i>
+        </p>
+        <p>
+          <i>
+            Anyways, if you are interested in scraping all Adobe Fonts at once,
+            please check out the
+            <a href="https://github.com/chiumax/adobe-font-scraper/">source</a>.
+          </i>
+        </p>
       </footer>
 
       <!--  -->

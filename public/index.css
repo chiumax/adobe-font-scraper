@@ -1,0 +1,108 @@
+html {
+  text-align: center;
+  color: white;
+  background-color: black;
+  font-size: 105%;
+  font-family: "PT Sans", sans-serif;
+}
+h1 {
+  font-size: 300%;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+form > * {
+  width: 450px;
+  margin-top: 10px;
+}
+
+form > label {
+  text-align: left;
+}
+
+footer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > p {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+input {
+  background-color: #000000;
+  border-color: white;
+  border-top-color: white;
+  color: white;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 10px;
+  max-width: 600px;
+  /* outline: none; */
+}
+/* .submit {
+  box-sizing: border-box;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+} */
+
+.submit:hover,
+.submit:focus {
+  background-color: white;
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.submit {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 20px 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  width: 200px;
+  background-color: #000000;
+}
+.submit:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+@media all and (max-width: 30em) {
+   .submit {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+a {
+  color: white;
+}
+a:active {
+  color: white;
+}
