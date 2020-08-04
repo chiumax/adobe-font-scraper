@@ -163,7 +163,7 @@ const writeFonts = async (fonts) => {
   return true;
 };
 
-scrapeFonts("https://fonts.adobe.com/fonts/fira-sans");
+// scrapeFonts("https://fonts.adobe.com/fonts/fira-sans");
 
 // run one time only, scrapes all the font links from adobe. This will generate a fontHrefs.json
 
