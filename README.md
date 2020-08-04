@@ -1,7 +1,6 @@
 # Adobe Font Scraper
-> Adobe Font Download Utility
-
-> Downloads .ttf font files from any Adobe font link.
+> Adobe Font Download Utility<br>
+Downloads .ttf font files from any Adobe font link.
 
 ## How To Run
 ```
