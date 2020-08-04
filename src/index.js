@@ -14,7 +14,7 @@ const app = express();
 
 app.use(helmet());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.resolve(__dirname, "public")));
+app.use(express.static(path.resolve(__dirname, "..", "public")));
 
 // Rate limiting: 30 requests / 1 min
 app.set("trust proxy", 1);
