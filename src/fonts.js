@@ -1,13 +1,13 @@
 const puppeteer = require("puppeteer");
+const path = require("path");
 const getUrls = require("get-urls");
 const request = require("request");
 const opentype = require("opentype.js");
 // const opentype = require("opentype/src/opentype.js");
-const woff2 = require("woff2");
+const woff2 = require(path.join(__dirname, "woff2", "src", "woff2.js"));
 const { zip } = require("zip-a-folder");
 const fs = require("fs");
 const rimraf = require("rimraf");
-const path = require("path");
 
 // global stuff...
 let fontFamily;
@@ -161,7 +161,7 @@ const writeFonts = async (fonts) => {
   return true;
 };
 
-// scrapeFonts("https://fonts.adobe.com/fonts/adasdfasdfobe-fangsong");
+scrapeFonts("https://fonts.adobe.com/fonts/fira-sans");
 
 // run one time only, scrapes all the font links from adobe. This will generate a fontHrefs.json
 

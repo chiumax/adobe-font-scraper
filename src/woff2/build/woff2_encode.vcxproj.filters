@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\common">
+      <UniqueIdentifier>{2F5FD094-EF52-77F7-7AA8-4327A01BF747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\dec">
+      <UniqueIdentifier>{5CF68805-77C4-1FB9-A420-45FAC842525E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\dec">
+      <UniqueIdentifier>{5CF68805-77C4-1FB9-A420-45FAC842525E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\dec">
+      <UniqueIdentifier>{5CF68805-77C4-1FB9-A420-45FAC842525E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\dec">
+      <UniqueIdentifier>{5CF68805-77C4-1FB9-A420-45FAC842525E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2">
+      <UniqueIdentifier>{AA5A2424-BF4B-2D0E-A03D-9BC526F055E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli">
+      <UniqueIdentifier>{AF16F5EA-A5AE-5FB2-094B-4EB95425BB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c">
+      <UniqueIdentifier>{CAE7F8DA-E845-16F7-E8EA-8DBDBBC6BC28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\woff2\brotli\c\enc">
+      <UniqueIdentifier>{3D195042-CAF3-E4EB-53FD-C085FC7A6AC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:">
+      <UniqueIdentifier>{7B735499-E5DD-1C2B-6C26-70023832A1CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users">
+      <UniqueIdentifier>{E9F714C1-DA89-54E2-60CF-39FEB20BF756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super">
+      <UniqueIdentifier>{C4C0B350-625B-FC24-18B3-5008D695AD5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super\AppData">
+      <UniqueIdentifier>{F852EB63-437C-846A-220F-8D9ED6DAEC1D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super\AppData\Roaming">
+      <UniqueIdentifier>{D51E5808-912B-5C70-4BB7-475D1DBFA067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super\AppData\Roaming\nvm">
+      <UniqueIdentifier>{1B85D12A-9F9C-E0A8-F82E-74864675B527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super\AppData\Roaming\nvm\v10.2.1">
+      <UniqueIdentifier>{AB716F0E-BCE2-10F5-6EA4-13A7664906C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super\AppData\Roaming\nvm\v10.2.1\node_modules">
+      <UniqueIdentifier>{56DF7A98-063D-FB9D-485C-089023B4C16A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super\AppData\Roaming\nvm\v10.2.1\node_modules\npm">
+      <UniqueIdentifier>{741E0E76-39B2-B1AB-9FA1-F1A20B16F295}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super\AppData\Roaming\nvm\v10.2.1\node_modules\npm\node_modules">
+      <UniqueIdentifier>{56DF7A98-063D-FB9D-485C-089023B4C16A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super\AppData\Roaming\nvm\v10.2.1\node_modules\npm\node_modules\node-gyp">
+      <UniqueIdentifier>{77348C0E-2034-7791-74D5-63C077DF5A3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C:\Users\Super\AppData\Roaming\nvm\v10.2.1\node_modules\npm\node_modules\node-gyp\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\woff2\src\font.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\glyph.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\normalize.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\table_tags.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\transform.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\variable_length.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\woff2_common.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\woff2_dec.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\woff2_enc.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\woff2_info.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\src\woff2_out.cc">
+      <Filter>..\woff2\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\common\dictionary.c">
+      <Filter>..\woff2\brotli\c\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\dec\bit_reader.c">
+      <Filter>..\woff2\brotli\c\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\dec\decode.c">
+      <Filter>..\woff2\brotli\c\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\dec\huffman.c">
+      <Filter>..\woff2\brotli\c\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\dec\state.c">
+      <Filter>..\woff2\brotli\c\dec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\backward_references.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\backward_references_hq.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\bit_cost.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\block_splitter.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\brotli_bit_stream.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\cluster.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\compress_fragment.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\compress_fragment_two_pass.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\dictionary_hash.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\encode.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\entropy_encode.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\histogram.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\literal_cost.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\memory.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\metablock.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\static_dict.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\woff2\brotli\c\enc\utf8_util.c">
+      <Filter>..\woff2\brotli\c\enc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\woff2_encode.cc">
+      <Filter>..\src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Super\AppData\Roaming\nvm\v10.2.1\node_modules\npm\node_modules\node-gyp\src\win_delay_load_hook.cc">
+      <Filter>C:\Users\Super\AppData\Roaming\nvm\v10.2.1\node_modules\npm\node_modules\node-gyp\src</Filter>
+    </ClCompile>
+    <None Include="..\binding.gyp">
+      <Filter>..</Filter>
+    </None>
+  </ItemGroup>
+</Project>

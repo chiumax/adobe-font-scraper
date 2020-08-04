@@ -28,10 +28,9 @@
     "puppeteer": "^5.2.1",
     "request": "^2.88.2",
     "rimraf": "^3.0.2",
-    "woff2": "^0.2.2",
     "zip-a-folder": "0.0.12"
   },
   "engines": {
-    "node": "14.6.0"
+    "node": "10.2.1"
   }
 }

@@ -1,0 +1,91 @@
+{
+  "_from": "woff2",
+  "_id": "woff2@0.2.2",
+  "_inBundle": false,
+  "_integrity": "sha1-8cwzn4/WDmtodlgYetZbMFJxCXc=",
+  "_location": "/woff2",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "woff2",
+    "name": "woff2",
+    "escapedName": "woff2",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/woff2/-/woff2-0.2.2.tgz",
+  "_shasum": "f1cc339f8fd60e6b687658187ad65b3052710977",
+  "_spec": "woff2",
+  "_where": "E:\\Dev\\2020\\adobe-font-scraper",
+  "author": {
+    "name": "Ruben Maher",
+    "email": "ruben@maher.fyi"
+  },
+  "bugs": {
+    "url": "https://github.com/eqyiel/node-woff2/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "nan": "^2.2.1"
+  },
+  "deprecated": false,
+  "description": "Node wrapper around Google's woff2 utility.",
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "font-awesome": "^4.5.0",
+    "mmmagic": "^0.5.0",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.9.1",
+    "tap": "^12.0.1",
+    "temp": "^0.8.3"
+  },
+  "engines": {
+    "node": ">=4.8.5"
+  },
+  "files": [
+    "README.md",
+    "binding.gyp",
+    "src/",
+    "test/",
+    "woff2/"
+  ],
+  "gypfile": true,
+  "homepage": "https://github.com/eqyiel/node-woff2#readme",
+  "license": "MIT",
+  "main": "./src/woff2.js",
+  "name": "woff2",
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "binding.gyp",
+        "options": {
+          "parser": "json"
+        }
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eqyiel/node-woff2.git"
+  },
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "lint": "npm-run-all run-eslint run-prettier",
+    "run-eslint": "eslint --config ./.eslintrc.json src/**.js test/**.js",
+    "run-prettier": "prettier **.json src/**/*{js,json} test/**/*{js,json} README.md binding.gyp --prose-wrap always --write",
+    "test": "tap test/*.js"
+  },
+  "version": "0.2.2"
+}
