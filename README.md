@@ -3,7 +3,7 @@
 Downloads .ttf font files from any Adobe font link.
 
 ## How To Run
-```
+```sh
 # install dependencies
 $ npm install
 
