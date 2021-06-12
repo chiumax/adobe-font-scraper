@@ -2,9 +2,11 @@
 > Adobe Font Download Utility<br>
 Downloads .ttf font files from any Adobe font link.
 
-Demo: https://adobe-font-scraper.herokuapp.com/
+~~Demo: https://adobe-font-scraper.herokuapp.com/~~
 
-Hosted on Heroku free tier so it might take a hot minute to spin up server and load.
+~~Hosted on Heroku free tier so it might take a hot minute to spin up server and load.~~
+
+GONE. No LINK. GOT DMCAd
 
 ## How To Run
 ```sh
